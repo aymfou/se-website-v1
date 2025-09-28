@@ -22,7 +22,7 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="signup.html">Sign Up</a></li>
+											<li><a href="connect.html">Connect</a></li>
 											<li><a href="#">Log In</a></li>
 										</ul>
 									</div>
@@ -42,55 +42,36 @@
 								<section>
 									<h4>Your Information</h4>
 									<p>Fill in the below form and we will get back to you the soonest.</p>
-									<form method="post" action="#">
+									<form id="contact-form">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												<input type="text" name="name" id="name" value="" placeholder="Name" onfocus="clearError(this)"/>
 											</div>
 											<div class="col-6 col-12-xsmall">
-												<input type="text" name="demo-company" id="demo-company" value="" placeholder="Company" />
+												<input type="text" name="company" id="company" value="" placeholder="Company" onfocus="clearError(this)"/>
 											</div>
 											<div class="col-12 col-12-xsmall">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												<input type="email" name="email" id="email" value="" placeholder="Email" onfocus="clearError(this)"/>
 											</div>
 											<div class="col-12">
-												<select name="demo-category" id="demo-category">
+												<select name="category" id="category" onfocus="clearError(this)">
 													<option value="">- Your interest -</option>
-													<option value="1">Consumer</option>
-													<option value="1">Generator</option>
-													<option value="1">Installer</option>
-													<option value="1">Public Utility</option>
+													<option value="Consumer">Consumer</option>
+													<option value="Generator">Generator</option>
+													<option value="Installer">Installer</option>
+													<option value="Other">Other</option>
 												</select>
 											</div>
-											<!--
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
+											<div class="col-12 potty">
+												<input type="text" name="occupation" id="occupation" value="" placeholder="Occupation" onfocus="clearError(this)"/>
 											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-normal" name="demo-priority">
-												<label for="demo-priority-normal">Normal</label>
-											</div>
-											<div class="col-4 col-12-small">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="col-6 col-12-small">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											-->
 											<div class="col-12">
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+												<textarea name="message" id="message" placeholder="Enter your message" rows="6" onfocus="clearError(this)"></textarea>
 											</div>
 											<div class="col-12">
 												<ul class="actions">
-													<li><input type="submit" value="Send Message" class="primary" /></li>
-													<li><input type="reset" value="Reset" /></li>
+													<li><input type="button" value="Send Message" class="primary" onclick="validateForm()"/></li>
+													<li><input type="reset" value="Reset" onclick="clearAllErrors()"/></li>
 												</ul>
 											</div>
 										</div>
@@ -109,7 +90,7 @@
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; 2025 Sun Electric</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
@@ -123,6 +104,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/form.js"></script>
 	</body>
 </html>

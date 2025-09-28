@@ -4082,3 +4082,7 @@ input, select, textarea {
 			display: none;
 		}
 	}
+
+	.potty {
+		display: none;
+	}
